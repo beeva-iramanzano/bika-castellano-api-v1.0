@@ -18,8 +18,8 @@ import freeling
 
 app = Flask(__name__)
 
-FREELINGDIR = "/home/ira/Desktop";
-DATA = FREELINGDIR+"/freeling-3.0/data";
+FREELINGDIR = FREELING_PYTHON;
+DATA = FREELINGDIR+"/data";
 LANG="/es";
 
 
