@@ -18,7 +18,7 @@ import freeling
 
 app = Flask(__name__)
 
-FREELINGDIR = FREELING_PYTHON;
+FREELINGDIR = (os.environ ['FREELING_PYTHON'] ) ;
 DATA = FREELINGDIR+"/data";
 LANG="/es";
 
