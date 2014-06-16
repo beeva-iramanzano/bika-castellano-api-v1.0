@@ -129,7 +129,7 @@ def extraer_entidades_aux(lista):
 
 def api_entidades(text, flag_json):
 
-  command= "echo \"" + text + "\" | analyzer_client localhost:50005 "
+  command= "echo \"" + text + "\" | analyzer_client localhost:50006 "
   respuesta = subprocess.check_output(command, shell=True)
   r= str(respuesta)
   respuesta=respuesta.decode("utf-8")
