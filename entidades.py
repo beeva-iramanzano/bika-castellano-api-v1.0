@@ -13,18 +13,8 @@ import subprocess
 
 
 ## Direcorio de instalación del API de python de freeling
-directorio = (os.environ ['FREELING_PYTHON'] ) +"/APIs/python"
-import sys
-sys.path.append( directorio  )
-import freeling
 
 app = Flask(__name__)
-
-FREELINGDIR = (os.environ ['FREELING_PYTHON'] )  ;
-DATA = FREELINGDIR+"/data";
-LANG="/es";
-
-
 
 
 def extraer_telefonos(text):
@@ -124,70 +114,25 @@ def extraer_entidades_aux(lista):
     pal = s[:fin]
     if s.find('NP00G00')>0: 
       stringaux = "{'addressLocality':'" + pal +"'},"
-      print("S: " + pal)
+      #print("S: " + pal)
       entidades.append(stringaux) 
     if s.find('NP00O00')>0: 
       stringaux = "{'affiliation': '" + pal + "'},"
-      print("S: " + pal)
+      #print("S: " + pal)
       entidades.append(stringaux)
     if s.find('NP00SP0')>0: 
       stringaux = "{'name': '"+pal+"'},"
-      print("S: " + pal)
+      #print("S: " + pal)
       entidades.append(stringaux) 
 
   return entidades
 
 def api_entidades(text, flag_json):
- ## Modify this line to be your FreeLing installation directory
-
-  freeling.util_init_locale("default");
-
-# create options set for maco analyzer. Default values are Ok, except for data files.
-  op= freeling.maco_options("es");
-  op.set_data_files( "",
-                   DATA + "/common/punct.dat", 
-                   DATA + LANG + "/dicc.src",
-                   DATA + LANG + "/afixos.dat",
-                   "",
-                   DATA + LANG + "/locucions.dat",             
-                   DATA + LANG + "/np.dat", 
-                   DATA + LANG + "/quantities.dat",
-                   DATA + LANG + "/probabilitats.dat");
-
-# create analyzers
-  tk=freeling.tokenizer(DATA+LANG+"/tokenizer.dat");
-  sp=freeling.splitter(DATA+LANG+"/splitter.dat");
-  sid=sp.open_session();
-  mf=freeling.maco(op);
-  mf.set_active_options(0, 1, 1, 1,  # select which among created 
-                      0, 1, 0, 1,  # submodules are to be used. 
-                      1, 1, 1, 1); # default: all created submodules are used
-
-
-  tg=freeling.hmm_tagger(DATA+LANG+"/tagger.dat",0,0);
-  sen=freeling.senses(DATA+LANG+"/senses.dat");
-
-  parser= freeling.chart_parser(DATA+LANG+"/chunker/grammar-chunk.dat");
-  dep=freeling.dep_txala(DATA+LANG+"/dep_txala/dependences.dat", parser.get_start_symbol());
-
-  nec=freeling.nec(DATA+LANG+"/nerc/nec/nec-ab-poor1.dat");
-
-  #Semantic Database Module
-  semantic = freeling.semanticDB (DATA + LANG +"/semdb.dat");
-
-  l = tk.tokenize(text);
-  ls = sp.split(sid,l,0);
-
-  ls = mf.analyze(ls);
-  ls = nec.analyze(ls);
-
 
   command= "echo \"" + text + "\" | analyzer_client localhost:50005 "
   respuesta = subprocess.check_output(command, shell=True)
   r= str(respuesta)
-  print (sys.getdefaultencoding())
   respuesta=respuesta.decode("utf-8")
-  print("RES: " + respuesta)
   pos = str(respuesta).split("\n")
 
   entidades= extraer_entidades_aux(pos)
@@ -244,23 +189,15 @@ def api_telefonos(text, flag_json):
 
 #flag_json = 1 (json) = 0 (string)
 def mostrar_entidades(text, flag_json):
-  freeling.util_init_locale("default");
 
-  op= freeling.maco_options("es");
-  op.set_active_modules(0,1,1,1,1,1,1,1,1,1,0)
-  op.set_data_files("",DATA+LANG+"/locucions.dat", DATA+LANG+"/quantities.dat",  DATA+LANG+"/afixos.dat", DATA+LANG+"/probabilitats.dat",DATA+LANG+ "/dicc.src", DATA+LANG+"/ner/ner-svm.dat",  DATA+"/common/punct.dat","");
+  command= "echo \"" + text + "\" | analyzer_client localhost:50005 "
+  respuesta = subprocess.check_output(command, shell=True)
+  r= str(respuesta)
+  respuesta=respuesta.decode("utf-8")
+  pos = str(respuesta).split("\n")
 
-  #i create analyzers
-  tk=freeling.tokenizer(DATA+LANG+"/tokenizer.dat");
-  sp=freeling.splitter(DATA+LANG+"/splitter.dat");
-  mf=freeling.maco(op);
-  nec=freeling.nec(DATA+LANG+"/nec/nec-ab.dat"); 
+  entidades= extraer_entidades_aux(pos)
 
-  l = tk.tokenize(text);
-  ls = sp.split(l,0);
-  ls = mf.analyze(ls);
-  ls = nec.analyze(ls);
-  entidades = extraer_entidades(ls)
   entitiesstring = "[" + ''.join(entidades) + "]"
   entitiesarrayjson = ast.literal_eval(entitiesstring)
   dates = extraer_fechas(text)
