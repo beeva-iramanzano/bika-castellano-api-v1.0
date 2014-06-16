@@ -7,6 +7,7 @@ La api está compuesta por 5 webservices REST, a los que se puede invocar tanto 
 SERVICIOS
 
 Extracción de fechas
+--------------------
 A partir de un texto en lenguaje natural, extrae las fechas que contiene. Utiliza expresiones regulares. Extrae fechas del tipo:
 1) Nombres de meses >> ‘month’
 2) Nombres de días de la semana >> ‘weekday’
@@ -15,14 +16,17 @@ A partir de un texto en lenguaje natural, extrae las fechas que contiene. Utiliz
 http://ip:5000/fechas
 
 Extracción de direcciones de correo
+-----------------------------------
 A partir de un texto en lenguaje natural, extrae las direcciones de correo que contiene. Utiliza expresiones regulares.
 Url del servicio: http://ip:5000/correos
 
 Extracción de número de teléfono
+--------------------------------
 A partir de un texto en lenguaje natural, extrae los número de teléfono que contiene. Utiliza expresiones regulares. 
 Url del servicio: http://ip:5000/telefonos
 
 Extracción de entidades
+-----------------------
 A partir de un texto en lenguaje natural, extrae las entidades que contiene. Utiliza Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 1) Personas: Nombre + Apellido >> ‘name’
 2) Localizaciones >> ‘addressLocality’
@@ -30,10 +34,12 @@ A partir de un texto en lenguaje natural, extrae las entidades que contiene. Uti
 Url del servicio: http://ip:5000/entidades
 
 Extracción completa
+-------------------
 A partir de un texto en lenguaje natural,  extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene.
 Url del servicio: http://ip:5000/bikaCastellano
 
 PUESTA EN MARCHA
+
 Para levantar el servicio es necesario:
 - arrancar freeling: analyze -f es.cfg --outf tagged --server --port 50006-
 - ejecutar el script 'entidades.py': python3 entidades.py
