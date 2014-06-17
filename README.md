@@ -2,7 +2,7 @@ Bika Castellano v1.0
 ========================
 
 Api que extrae informacion (personas, empresas, fechas,...) de un texto en castellano.
-La api está compuesta por 5 webservices REST, a los que se puede invocar tanto con 'Get' como con 'Post'. La respuesta de estos servicios está en formato Json. 
+La api está compuesta por 5 webservices REST, a los que se puede invocar tanto con 'Get' como con 'Post'. El texto en lenguaje natural, se pasa con el nombre 'text'. La respuesta de estos servicios está en formato Json. 
 
 
 Puesta en marcha
@@ -28,38 +28,39 @@ Servicios
    4) Años YYYY >> ‘year’
    
  
-Url: http://ip:5000/fechas, Methods: GET, POST
+URL: http://ip:5000/fechas, Methods: GET, POST
 
-Response: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
+RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
 
 - Extracción de direcciones de correo: Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-Url: http://ip:5000/correos, Methods: GET, POST
+URL: http://ip:5000/correos
 
-Response: "emails_list": [{"email": "jdclark@email.com."}]
+RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
 
 
 
 - Extracción de número de teléfono: Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-URL: http://ip:5000/telefonos, Methods: GET, POST
+URL: http://ip:5000/telefonos
 
-Response: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
-
-
-
-- Extracción de entidades
-
-Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
-1) Personas: Nombre + Apellido >> ‘name’
-2) Localizaciones >> ‘addressLocality’
-3) Organizaciones  >> ‘affiliation’
+RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
 
 
-Url: http://ip:5000/entidades, Methods: GET, POST
-Response: 
+
+- Extracción de entidades: Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
+-
+-   1) Personas: Nombre + Apellido >> ‘name’
+-
+-   2) Localizaciones >> ‘addressLocality’
+-  
+-   3) Organizaciones  >> ‘affiliation’
+
+
+URL: http://ip:5000/entidades, Methods: GET, POST
+RESPUESTA: 
 
    "entities_list": [{
        "name": "John Clark"
