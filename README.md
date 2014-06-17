@@ -21,13 +21,10 @@ Servicios
 
 Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
-1) Nombres de meses >> ‘month’
-
-2) Nombres de días de la semana >> ‘weekday’
-
-3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
-
-4) Años YYYY >> ‘year’
+   1) Nombres de meses >> ‘month’
+   2) Nombres de días de la semana >> ‘weekday’
+   3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
+   4) Años YYYY >> ‘year’
    
 
       URL: http://ip:5000/fechas
