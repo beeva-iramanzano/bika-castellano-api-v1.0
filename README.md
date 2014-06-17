@@ -17,7 +17,7 @@ Para levantar el servicio es necesario:
 Servicios
 ---------
 
-. Extracción de fechas
+- Extracción de fechas
 Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 1) Nombres de meses >> ‘month’
 2) Nombres de días de la semana >> ‘weekday’
@@ -38,7 +38,7 @@ Response: JSON array
        "birthDate": "21/03/75"
    }]
 
-. Extracción de direcciones de correo
+- Extracción de direcciones de correo
 Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
 URL: http://ip:5000/correos
@@ -49,7 +49,7 @@ Response: JSON array
        "email": "jdclark@email.com."
    }]
 
-. Extracción de número de teléfono
+- Extracción de número de teléfono
 Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
 URL: http://ip:5000/telefonos
@@ -64,7 +64,7 @@ Response: JSON array
        "telephone": "912345678"
    }]
 
-. Extracción de entidades
+- Extracción de entidades
 Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 1) Personas: Nombre + Apellido >> ‘name’
 2) Localizaciones >> ‘addressLocality’
@@ -97,8 +97,8 @@ Response: JSON array
 
 
 
-Extracción completa
-Webservice que extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene un texto en lenguaje natural.
+- Extracción completa
+Webservice que extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene un texto en lenguaje natura.
 
 URL: http://ip:5000/bikaCastellano
 Methods: POST, GET
