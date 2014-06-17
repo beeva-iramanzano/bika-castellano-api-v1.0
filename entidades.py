@@ -190,7 +190,7 @@ def api_telefonos(text, flag_json):
 #flag_json = 1 (json) = 0 (string)
 def mostrar_entidades(text, flag_json):
 
-  command= "echo \"" + text + "\" | analyzer_client localhost:50005 "
+  command= "echo \"" + text + "\" | analyzer_client localhost:50006 "
   respuesta = subprocess.check_output(command, shell=True)
   r= str(respuesta)
   respuesta=respuesta.decode("utf-8")
@@ -217,9 +217,9 @@ def mostrar_entidades(text, flag_json):
   addressarrayjson = ast.literal_eval(addressstring)
   
   if flag_json:  #json
-    resultado = jsonify({'entities_list': entitiesarrayjson, 'dates_list': datesarrayjson, 'emails_list': emailsarrayjson, 'phones_list': phonesarrayjson, 'address_list': addressarrayjson})
+    resultado = jsonify({'entities_list': entitiesarrayjson, 'dates_list': datesarrayjson, 'emails_list': emailsarrayjson, 'phones_list': phonesarrayjson})
   else: #string
-    resultado = json.dumps({'entities_list': entitiesarrayjson, 'dates_list': datesarrayjson, 'emails_list': emailsarrayjson, 'phones_list': phonesarrayjson, 'address_list': addressarrayjson})
+    resultado = json.dumps({'entities_list': entitiesarrayjson, 'dates_list': datesarrayjson, 'emails_list': emailsarrayjson, 'phones_list': phonesarrayjson})
   
   return resultado
 
