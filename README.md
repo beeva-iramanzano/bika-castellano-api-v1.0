@@ -39,6 +39,8 @@ Response: JSON array
        "birthDate": "21/03/75"
    }]
 
+
+
 - Extracción de direcciones de correo
 
 Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
@@ -51,7 +53,10 @@ Response: JSON array
        "email": "jdclark@email.com."
    }]
 
+
+
 - Extracción de número de teléfono
+
 Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
 URL: http://ip:5000/telefonos
@@ -66,7 +71,10 @@ Response: JSON array
        "telephone": "912345678"
    }]
 
+
+
 - Extracción de entidades
+
 Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 1) Personas: Nombre + Apellido >> ‘name’
 2) Localizaciones >> ‘addressLocality’
@@ -100,6 +108,7 @@ Response: JSON array
 
 
 - Extracción completa
+
 Webservice que extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene un texto en lenguaje natura.
 
 URL: http://ip:5000/bikaCastellano
@@ -172,28 +181,5 @@ Body
    }]
 }
 
-GET
-Request
-Headers
 
-Body
-
-
-Request Url: http://ip:5000/bikaCastellano
-Request Method: GET
-Status Code: 200
-Params: {
-   "callback": "jQuery11654254656562545656",
-   "text": "\"Mi nombre es John Clark y tengo 28 años. Soy abogado. Naci el 26/06/1972 en Madrid, España. Vivo en la calle Orujo,4, 23700, Linares, España. En caso de emergencia, Lunes o Domingo, por favor contacta con mi mujer Morgan Clark, ella nacio el 21/03/1975. Puedes contactar conmigo por email en jdclark@email.com. Mi número de teléfono es el 213 555 776 y el número de casa es el 666555888 y 91 555 22 22. Trabajo en BBVA, Ericson y GE..\""
-}
-
-Response
-Headers
-Status Code: 200
-Date: Mon, 16 Dec 2013 16:09:02 GMT
-Server: Werkzeug/0.9.4 Python/3.3.3
-Content-Length: 551
-Content-Type: text/html; charset=utf-8
-Body
-jQuery11654254656562545656({"entities_list": [{"name": "John Clark"}, {"addressLocality": "Madrid"}, {"addressLocality": "España"}, {"addressLocality": "Linares"}, {"addressLocality": "España"}, {"name": "Morgan Clark"}, {"affiliation": "BBVA"}, {"affiliation": "ERICSSON"}, {"affiliation": "GE"}], "address_list": [], "dates_list": [{"weekday": "Lunes"}, {"weekday": "Domingo"}, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}], "phones_list": [{"telephone": "213555776"}, {"telephone": "666777897"}, {"telephone": "912345678"}], "emails_list": [{"email": "jdclark@email.com."}]});
 
