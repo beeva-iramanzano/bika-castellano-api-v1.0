@@ -18,7 +18,7 @@ Servicios
 ---------
 
 - Extracción de fechas
--
+
 Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
 1) Nombres de meses >> ‘month’
