@@ -19,48 +19,48 @@ Servicios
 
 - Extracción de fechas: Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
-   1) Nombres de meses >> ‘month’
+1) Nombres de meses >> ‘month’
 
-   2) Nombres de días de la semana >> ‘weekday’
+2) Nombres de días de la semana >> ‘weekday’
 
-   3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
+3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
 
-   4) Años YYYY >> ‘year’
+4) Años YYYY >> ‘year’
    
  
-URL: http://ip:5000/fechas, Methods: GET, POST
+   URL: http://ip:5000/fechas, Methods: GET, POST
 
-RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
+   RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
 
 - Extracción de direcciones de correo: Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-URL: http://ip:5000/correos
+   URL: http://ip:5000/correos
 
-RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
+   RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
 
 
 
 - Extracción de número de teléfono: Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-URL: http://ip:5000/telefonos
+   URL: http://ip:5000/telefonos
 
-RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
+   RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
 
 
 
 - Extracción de entidades: Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 
-   1) Personas: Nombre + Apellido >> ‘name’
+1) Personas: Nombre + Apellido >> ‘name’
 
-   2) Localizaciones >> ‘addressLocality’
+2) Localizaciones >> ‘addressLocality’
   
-   3) Organizaciones  >> ‘affiliation’
+3) Organizaciones  >> ‘affiliation’
 
 
-- URL: http://ip:5000/entidades, Methods: GET, POST
-- RESPUESTA: 
+   URL: http://ip:5000/entidades, Methods: GET, POST
+   RESPUESTA: 
 
    "entities_list": [{
        "name": "John Clark"
