@@ -1,7 +1,7 @@
 bika-castellano-api-v1.0
 ========================
 
-Api que extrae información (personas, empresas, fechas,...) de un texto en castellano.
+Api que extrae informacion (personas, empresas, fechas,...) de un texto en castellano.
 La api está compuesta por 5 webservices REST, a los que se puede invocar tanto con 'Get' como con 'Post'. La respuesta de estos servicios está en formato Json. 
 
 
