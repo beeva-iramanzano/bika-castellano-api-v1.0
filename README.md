@@ -51,16 +51,16 @@ RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897
 
 
 - Extracción de entidades: Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
--
--   1) Personas: Nombre + Apellido >> ‘name’
--
--   2) Localizaciones >> ‘addressLocality’
--  
--   3) Organizaciones  >> ‘affiliation’
+
+   1) Personas: Nombre + Apellido >> ‘name’
+
+   2) Localizaciones >> ‘addressLocality’
+  
+   3) Organizaciones  >> ‘affiliation’
 
 
-URL: http://ip:5000/entidades, Methods: GET, POST
-RESPUESTA: 
+- URL: http://ip:5000/entidades, Methods: GET, POST
+- RESPUESTA: 
 
    "entities_list": [{
        "name": "John Clark"
