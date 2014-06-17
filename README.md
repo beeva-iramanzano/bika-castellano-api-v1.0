@@ -17,7 +17,9 @@ Para levantar el servicio es necesario:
 Servicios
 ---------
 
-- Extracción de fechas: Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
+- Extracción de fechas
+
+Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
 1) Nombres de meses >> ‘month’
 
@@ -34,7 +36,9 @@ Servicios
 
 
 
-- Extracción de direcciones de correo: Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
+- Extracción de direcciones de correo
+
+Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
    URL: http://ip:5000/correos
 
