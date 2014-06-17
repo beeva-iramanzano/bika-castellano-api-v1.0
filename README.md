@@ -40,18 +40,20 @@ Webservice que extrae las fechas que contiene un texto en lenguaje natural. Util
 
 Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-   URL: http://ip:5000/correos
+      URL: http://ip:5000/correos
 
-   RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
+      RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
 
 
 
-- Extracción de número de teléfono: Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
+- Extracción de número de teléfono
 
-   URL: http://ip:5000/telefonos
+Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-   RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
+      URL: http://ip:5000/telefonos
 
+      RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
+   
 
 
 - Extracción de entidades: Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
