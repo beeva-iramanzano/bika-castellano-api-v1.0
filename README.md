@@ -19,33 +19,24 @@ Servicios
 
 - Extracción de fechas: Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
-   . Nombres de meses >> ‘month’
+   1) Nombres de meses >> ‘month’
 
-   . Nombres de días de la semana >> ‘weekday’
+   2) Nombres de días de la semana >> ‘weekday’
 
-   . Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
+   3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
 
-   . Años YYYY >> ‘year’
+   4) Años YYYY >> ‘year’
  
-Url: http://ip:5000/fechas
+   Url: http://ip:5000/fechas, Methods: GET, POST
 
-Methods: GET, POST
-
-Response: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
+   Response: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
 
-- Extracción de direcciones de correo
+- Extracción de direcciones de correo: Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
-
-URL: http://ip:5000/correos
-Methods: GET, POST
-Response: JSON array
-
- "emails_list": [{
-       "email": "jdclark@email.com."
-   }]
+Url: http://ip:5000/correos, Methods: GET, POST
+Response: "emails_list": [{"email": "jdclark@email.com."}]
 
 
 
