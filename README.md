@@ -1,11 +1,11 @@
-bika-castellano-api-v1.0
+Bika Castellano v1.0
 ========================
 
 Api que extrae informacion (personas, empresas, fechas,...) de un texto en castellano.
 La api está compuesta por 5 webservices REST, a los que se puede invocar tanto con 'Get' como con 'Post'. La respuesta de estos servicios está en formato Json. 
 
 
-SERVICIOS
+Servicios
 ---------
 
 . Extracción de fechas: Webservice que a partir de un texto en lenguaje natural, extrae las fechas que contiene. Utiliza expresiones regulares. Extrae fechas del tipo:
@@ -39,7 +39,7 @@ http://ip:5000/entidades
 http://ip:5000/bikaCastellano
 
 
-PUESTA EN MARCHA
+Puesta en marcha
 ----------------
 Para levantar el servicio es necesario:
 - tener instalada la version 3.0 de Puthon o superior.
