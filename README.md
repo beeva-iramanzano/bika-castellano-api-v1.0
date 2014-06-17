@@ -18,7 +18,7 @@ Servicios
 ---------
 
 - Extracción de fechas
-
+-
 Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
 1) Nombres de meses >> ‘month’
@@ -30,9 +30,9 @@ Webservice que extrae las fechas que contiene un texto en lenguaje natural. Util
 4) Años YYYY >> ‘year’
    
  
-   URL: http://ip:5000/fechas, Methods: GET, POST
+      URL: http://ip:5000/fechas, Methods: GET, POST
 
-   RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
+      RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
 
