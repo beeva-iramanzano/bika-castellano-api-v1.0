@@ -26,35 +26,27 @@ Servicios
    3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
 
    4) Años YYYY >> ‘year’
+   
  
-   Url: http://ip:5000/fechas, Methods: GET, POST
+Url: http://ip:5000/fechas, Methods: GET, POST
 
-   Response: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
+Response: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
 
 - Extracción de direcciones de correo: Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
 Url: http://ip:5000/correos, Methods: GET, POST
+
 Response: "emails_list": [{"email": "jdclark@email.com."}]
 
 
 
-- Extracción de número de teléfono
+- Extracción de número de teléfono: Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
-Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
+URL: http://ip:5000/telefonos, Methods: GET, POST
 
-URL: http://ip:5000/telefonos
-Methods: GET, POST
-Response: JSON array
-
-"phones_list": [{
-       "telephone": "213555776"
-   }, {
-       "telephone": "666777897"
-   }, {
-       "telephone": "912345678"
-   }]
+Response: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
 
 
 
@@ -66,9 +58,8 @@ Webservice que extrae las entidades que contiene un texto en lenguaje natural.Ut
 3) Organizaciones  >> ‘affiliation’
 
 
-URL: http://ip:5000/entidades
-Methods: GET, POST
-Response: JSON array
+Url: http://ip:5000/entidades, Methods: GET, POST
+Response: 
 
    "entities_list": [{
        "name": "John Clark"
