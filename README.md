@@ -17,7 +17,7 @@ Para levantar el servicio es necesario:
 Servicios
 ---------
 
-- Extracción de fechas
+- EXTRACCIÓN DE FECHAS
 
 Webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 
@@ -35,7 +35,7 @@ Webservice que extrae las fechas que contiene un texto en lenguaje natural. Util
 
 
 
-- Extracción de direcciones de correo
+- EXTRACCIÓN DE DIRECCIONES DE CORREO
 
 Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
@@ -44,7 +44,7 @@ Webservice que extrae las direcciones de correo electrónico que contiene un tex
 
 
 
-- Extracción de número de teléfono
+- EXTRACCIÓN DE NÚMEROS DE TELÉFONO
 
 Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
@@ -53,7 +53,7 @@ Webservice que extrae los número de teléfono que contiene un texto en lenguaje
    
 
 
-- Extracción de entidades
+- EXTRACCIÓN DE ENTIDADES
 
 Webservice que extrae las entidades que contiene un texto en lenguaje natural.Utiliza los módulos de Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 
@@ -67,7 +67,7 @@ Webservice que extrae las entidades que contiene un texto en lenguaje natural.Ut
       URL: http://ip:5000/entidades, Methods: GET, POST
       RESPUESTA: "entities_list": [{"name": "John_Clark"},  {"addressLocality": "Madrid"}, {"addressLocality": "España"}, {"addressLocality": "Linares"}, {"addressLocality": "España"}, {"name": "Morgan_Clark"}, {"affiliation": "BBVA"}, {"affiliation": "Ericson"}, {"affiliation": "GE"}]
 
-- Extracción completa
+- EXTRACCIÓN DE COMPLETA
 
 Webservice que extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene un texto en lenguaje natura.
 
