@@ -29,9 +29,8 @@ Webservice que extrae las fechas que contiene un texto en lenguaje natural. Util
 
 4) Años YYYY >> ‘year’
    
- 
-      URL: http://ip:5000/fechas, Methods: GET, POST
 
+      URL: http://ip:5000/fechas, Methods: GET, POST
       RESPUESTA: "dates_list": [{ "weekday": "Lunes"}, {"weekday": "Domingo" }, {"birthDate": "26/06/72"}, {"birthDate": "21/03/75"}]
 
 
@@ -41,7 +40,6 @@ Webservice que extrae las fechas que contiene un texto en lenguaje natural. Util
 Webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
       URL: http://ip:5000/correos
-
       RESPUESTA: "emails_list": [{"email": "jdclark@email.com."}]
 
 
@@ -51,7 +49,6 @@ Webservice que extrae las direcciones de correo electrónico que contiene un tex
 Webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
       URL: http://ip:5000/telefonos
-
       RESPUESTA: "phones_list": [{"telephone": "213555776"}, { "telephone": "666777897" }, { "telephone": "912345678"}]
    
 
@@ -68,29 +65,7 @@ Webservice que extrae las entidades que contiene un texto en lenguaje natural.Ut
 
 
       URL: http://ip:5000/entidades, Methods: GET, POST
-      RESPUESTA: 
-
-   "entities_list": [{
-       "name": "John Clark"
-   }, {
-       "addressLocality": "Madrid"
-   }, {
-       "addressLocality": "España"
-   }, {
-       "addressLocality": "Linares"
-   }, {
-       "addressLocality": "España"
-   }, {
-       "name": "Morgan Clark"
-   }, {
-       "affiliation": "BBVA"
-   }, {
-       "affiliation": "ERICSSON"
-   }, {
-       "affiliation": "GE"
-   }]
-
-
+      RESPUESTA: "entities_list": [{"name": "John_Clark"},  {"addressLocality": "Madrid"}, {"addressLocality": "España"}, {"addressLocality": "Linares"}, {"addressLocality": "España"}, {"name": "Morgan_Clark"}, {"affiliation": "BBVA"}, {"affiliation": "Ericson"}, {"affiliation": "GE"}]
 
 - Extracción completa
 
