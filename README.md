@@ -8,7 +8,7 @@ La api está compuesta por 5 webservices REST, a los que se puede invocar tanto 
 Servicios
 ---------
 
-. Extracción de fechas: Webservice que a partir de un texto en lenguaje natural, extrae las fechas que contiene. Utiliza expresiones regulares. Extrae fechas del tipo:
+. Extracción de fechas:  webservice que extrae las fechas que contiene un texto en lenguaje natural. Utiliza expresiones regulares. Extrae fechas del tipo:
 1) Nombres de meses >> ‘month’
 2) Nombres de días de la semana >> ‘weekday’
 3) Fechas con el formato: YYYY-mm-dd , YYYY/mm/dd, dd-mm-YYYY  o  dd/mm/YYYY >> ‘birthDate’
@@ -17,16 +17,16 @@ Servicios
 http://ip:5000/fechas
 
 
-. Extracción de direcciones de correo: Webservice que a partir de un texto en lenguaje natural, extrae las direcciones de correo que contiene. Utiliza expresiones regulares.
+. Extracción de direcciones de correo: webservice que extrae las direcciones de correo electrónico que contiene un texto en lenguaje natural.
 
 http://ip:5000/correos
 
 
-. Extracción de número de teléfono: Webservice que a partir de un texto en lenguaje natural, extrae los número de teléfono que contiene. Utiliza expresiones regulares.
+. Extracción de número de teléfono: webservice que extrae los número de teléfono que contiene un texto en lenguaje natural. Utiliza expresiones regulares.
 
 http://ip:5000/telefonos
 
-. Extracción de entidades: Webservice que a partir de un texto en lenguaje natural, extrae las entidades que contiene. Utiliza Freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
+. Extracción de entidades: webservice que extrae las entidades que contiene un texto en lenguaje natural. Utiliza los módulos de freeling NER (Named Entity Recognition) y NEC (Named Entity Clasification). Extrae:
 1) Personas: Nombre + Apellido >> ‘name’
 2) Localizaciones >> ‘addressLocality’
 3) Organizaciones  >> ‘affiliation’
@@ -34,7 +34,7 @@ http://ip:5000/telefonos
 http://ip:5000/entidades
 
 
-. Extracción completa: Webservice que a  partir de un texto en lenguaje natural,  extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene.
+. Extracción completa: webservice que extrae las entidades, fechas, direcciones de correo electrónico y números de teléfono que contiene un texto en lenguaje natural.
 
 http://ip:5000/bikaCastellano
 
