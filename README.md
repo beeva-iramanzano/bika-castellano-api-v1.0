@@ -10,7 +10,7 @@ Puesta en marcha
 Para levantar el servicio es necesario:
 - tener instalada la version 3.0 de Puthon o superior
 - tener instalada la versión 3.1 de freeling o superior
-- arrancar freeling: analyze -f es.cfg --outf tagged --server --port 50006
+- arrancar freeling: analyze -f es.cfg --outf tagged --server --port 50007
 - ejecutar el script 'entidades.py': python3 entidades.py
 
 
