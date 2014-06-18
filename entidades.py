@@ -129,7 +129,7 @@ def extraer_entidades_aux(lista):
 
 def api_entidades(text, flag_json):
 
-  command= "echo \"" + text + "\" | analyzer_client localhost:50006 "
+  command= "echo \"" + text + "\" | analyzer_client localhost:50007 "
   respuesta = subprocess.check_output(command, shell=True)
   r= str(respuesta)
   respuesta=respuesta.decode("utf-8")
@@ -190,7 +190,7 @@ def api_telefonos(text, flag_json):
 #flag_json = 1 (json) = 0 (string)
 def mostrar_entidades(text, flag_json):
 
-  command= "echo \"" + text + "\" | analyzer_client localhost:50006 "
+  command= "echo \"" + text + "\" | analyzer_client localhost:50007 "
   respuesta = subprocess.check_output(command, shell=True)
   r= str(respuesta)
   respuesta=respuesta.decode("utf-8")
